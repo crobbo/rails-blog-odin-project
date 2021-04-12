@@ -11,7 +11,11 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-gray-50 font-mono">
+  <div class="flex w-full bg-gray-300 items-center justify-around	p-3">
+    <h1 class="w-2/3 text-left text-2xl p-2 text-gray-800 font-bold"><%= link_to "A Simple Rails Blog", "/" %></h1>
+    <%= link_to "NEW POST", new_article_path, :class => "bg-blue-600 p-2 text-white rounded tracking-wide"%>
+</div>
     <%= yield %>
   </body>
 </html>
