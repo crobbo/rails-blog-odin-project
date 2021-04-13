@@ -10,13 +10,13 @@
 </div>
 
 
-<div class="flex flex-row flex-wrap ml-5 text-3xl p-5 justify-start md:items-center w-full">
+<div class="flex flex-row flex-wrap md:ml-5 text-3xl p-5 justify-start md:items-center w-full">
     <% @articles.each do |article| %>
       <% unless article.archived? %>
           <div class="w-full my-5 md:my-7 md:w-1/2 lg:w-1/4">
-            <div class="h-40 w-full space-y-3 border-gray-500 border p-5 rounded-2xl shadow sm:h-40  md:w-10/12 md:h-56 lg:h-56 hover:bg-gray-200">
+            <div class="overflow-clip overflow-hidden h-40 w-full space-y-3 border-gray-500 border p-5 rounded-2xl shadow sm:h-40  md:w-10/12 md:h-56 lg:h-56 hover:bg-gray-200">
                <div><%= link_to article.title, article %></div>
-              <div class="text-base"><%= link_to article.body, article %></div>
+              <div class="text-base mb-10"><%= link_to article.body, article %></div>
             </div>
           </div>
       <% end %>

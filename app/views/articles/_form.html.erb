@@ -1,7 +1,7 @@
 <%= form_with model: article do |form| %>
   <div >
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :class => "w-full border-2 border-gray-400" %>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -9,8 +9,8 @@
 
   <div>
     <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
+    <%= form.text_area :body, :class => "w-full border-2 border-gray-400 h-48" %><br>
+    <% article.errors.full_messages_for(:body).each do |message| %>"
       <div><%= message %></div>
     <% end %>
   </div>
@@ -21,6 +21,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Submit", :class=> "bg-blue-600 px-2 py-1 mt-3 text-white rounded tracking-wide" %>
   </div>
 <% end %>
